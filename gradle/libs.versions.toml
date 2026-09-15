@@ -1,0 +1,57 @@
+# Single source of truth for every plugin and library version used by the FuckAPK projects.
+#
+# The consumer repositories import this file as their `libs` version catalog:
+#
+#     dependencyResolutionManagement {
+#         versionCatalogs { create("libs") { from(files("build-logic/gradle/libs.versions.toml")) } }
+#     }
+#
+# so a version bump here is a one-line change for all projects.
+
+[versions]
+agp = "8.13.2"
+kotlin = "2.2.20"
+composeBom = "2025.05.00"
+
+material = "1.13.0"
+preference = "1.2.1"
+libsu = "6.0.0"
+glideGifencoder = "5.0.5"
+zxing = "3.5.3"
+exifinterface = "1.4.1"
+work = "2.10.4"
+timber = "5.0.1"
+
+libxposedApi = "101.0.1"
+libxposedService = "101.0.0"
+legacyXposedApi = "82"
+
+[libraries]
+# --- build-logic classpath (never a dependency of an app) -------------------
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-compose-compiler-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+
+# --- AndroidX / UI ---------------------------------------------------------
+# The compose artifacts carry no version on purpose: the BOM below pins them.
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose" }
+androidx-preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preference" }
+androidx-exifinterface = { module = "androidx.exifinterface:exifinterface", version.ref = "exifinterface" }
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
+
+# --- third party -----------------------------------------------------------
+material = { module = "com.google.android.material:material", version.ref = "material" }
+libsu-core = { module = "com.github.topjohnwu.libsu:core", version.ref = "libsu" }
+glide-gifencoder = { module = "com.github.bumptech.glide:gifencoder-integration", version.ref = "glideGifencoder" }
+zxing-core = { module = "com.google.zxing:core", version.ref = "zxing" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+# --- Xposed / libxposed ----------------------------------------------------
+libxposed-api = { module = "io.github.libxposed:api", version.ref = "libxposedApi" }
+libxposed-service = { module = "io.github.libxposed:service", version.ref = "libxposedService" }
+legacy-xposed-api = { module = "de.robv.android.xposed:api", version.ref = "legacyXposedApi" }
