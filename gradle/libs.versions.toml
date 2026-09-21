@@ -22,8 +22,8 @@ exifinterface = "1.4.2"
 work = "2.11.2"
 timber = "5.0.1"
 
-libxposedApi = "102.0.0"
-libxposedService = "102.0.0"
+libxposedApi = "101.0.1"
+libxposedService = "101.0.0"
 legacyXposedApi = "82"
 
 [libraries]
