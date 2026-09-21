@@ -11,19 +11,19 @@
 [versions]
 agp = "8.13.2"
 kotlin = "2.2.20"
-composeBom = "2025.05.00"
+composeBom = "2025.09.01"
 
-material = "1.13.0"
+material = "1.14.0"
 preference = "1.2.1"
 libsu = "6.0.0"
-glideGifencoder = "5.0.5"
-zxing = "3.5.3"
-exifinterface = "1.4.1"
-work = "2.10.4"
+glideGifencoder = "5.0.9"
+zxing = "3.5.4"
+exifinterface = "1.4.2"
+work = "2.11.2"
 timber = "5.0.1"
 
-libxposedApi = "101.0.1"
-libxposedService = "101.0.0"
+libxposedApi = "102.0.0"
+libxposedService = "102.0.0"
 legacyXposedApi = "82"
 
 [libraries]
