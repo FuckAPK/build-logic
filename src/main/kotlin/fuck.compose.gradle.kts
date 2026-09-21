@@ -35,6 +35,7 @@ pluginManager.withPlugin("com.android.library") {
 dependencies {
     add("implementation", platform(composeLibrary("compose-bom")))
     add("implementation", composeLibrary("compose-material3"))
+    add("implementation", composeLibrary("compose-material-icons-core"))
     add("implementation", composeLibrary("compose-ui"))
     add("implementation", composeLibrary("androidx-activity-compose"))
     add("implementation", composeLibrary("compose-ui-tooling-preview"))
