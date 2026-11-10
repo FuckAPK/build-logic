@@ -16,6 +16,7 @@ composeBom = "2025.09.01"
 material = "1.14.0"
 preference = "1.2.1"
 libsu = "6.0.0"
+shizuku = "13.1.5"
 glideGifencoder = "5.0.5"
 zxing = "3.5.4"
 exifinterface = "1.4.2"
@@ -48,6 +49,8 @@ androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version
 # --- third party -----------------------------------------------------------
 material = { module = "com.google.android.material:material", version.ref = "material" }
 libsu-core = { module = "com.github.topjohnwu.libsu:core", version.ref = "libsu" }
+shizuku-api = { module = "dev.rikka.shizuku:api", version.ref = "shizuku" }
+shizuku-provider = { module = "dev.rikka.shizuku:provider", version.ref = "shizuku" }
 glide-gifencoder = { module = "com.github.bumptech.glide:gifencoder-integration", version.ref = "glideGifencoder" }
 zxing-core = { module = "com.google.zxing:core", version.ref = "zxing" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
